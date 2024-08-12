@@ -1,0 +1,199 @@
+/* Reset and general styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar styling */
+header {
+    position: relative;
+}
+
+.navbar-container {
+    position: fixed;
+    top: 30px;
+    left: 50px;
+    right: 50px;
+    background-color: transparent;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(50px);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    border-top: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 60px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(218, 202, 202, 0.1);
+}
+
+.navbar-brand img {
+    height: auto;
+    margin-left: 20px;
+    margin-top: auto;
+}
+
+.navbar-toggler {
+    display: none; /* Hide for larger screens */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navbar-nav {
+    display: flex;
+}
+
+.navbar-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin: 0 5px;
+}
+
+.navbar-nav a {
+    font-weight: bold;
+    padding: 7px 16px;
+    border-radius: 25px;
+    color: #69449B;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav a:hover, .navbar-nav a:focus {
+    background-color: #69449B;
+    color: #ffffff;
+}
+
+/* Hero Section */
+#hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+/* Carousel */
+/* .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+} */
+
+/* .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+} */
+
+/* Services Section */
+#services {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #2a3f88;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none; /* Hide nav on smaller screens by default */
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-toggler {
+        display: block; /* Show toggle button */
+    }
+
+    .navbar-nav.show {
+        display: flex; /* Show nav when toggled */
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+}
